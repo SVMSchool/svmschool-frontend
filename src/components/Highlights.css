@@ -1,0 +1,50 @@
+.highlights {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  background-color: #FDF9F0;
+}
+
+.highlight-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: center;
+  min-width: 200px;
+  box-shadow: 0 8px 24px rgba(31, 75, 54, 0.08);
+  border: 1px solid rgba(31, 75, 54, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(31, 75, 54, 0.15);
+}
+
+.highlight-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #1F4B36;
+  margin: 0 0 8px 0;
+}
+
+.highlight-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #4A4A3A;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .highlight-card {
+    min-width: 140px;
+    padding: 24px 20px;
+  }
+  .highlight-number {
+    font-size: 32px;
+  }
+}
