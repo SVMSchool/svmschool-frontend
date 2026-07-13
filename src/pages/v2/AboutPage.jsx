@@ -76,6 +76,97 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* School Profile & Infrastructure */}
+      <section className="section about-stats-section" id="school-profile">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-label">School Profile</span>
+            <h2 className="section-title">Demographics & Infrastructure</h2>
+            <hr className="divider divider-center" />
+          </div>
+
+          <div className="about-stats-grid">
+            <div className="stat-card">
+              <h3>1876</h3>
+              <p>Total Students</p>
+            </div>
+            <div className="stat-card">
+              <h3>62</h3>
+              <p>Total Teachers</p>
+            </div>
+            <div className="stat-card">
+              <h3>59</h3>
+              <p>Class Rooms</p>
+            </div>
+            <div className="stat-card">
+              <h3>1:30</h3>
+              <p>Student-Teacher Ratio</p>
+            </div>
+          </div>
+
+          <div className="about-details-grid">
+            {/* Enrollment Table */}
+            <div className="about-details-card">
+              <h3 className="details-title">Student Enrollment</h3>
+              <div className="table-responsive">
+                <table className="details-table">
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>No. of Students</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Pre-Primary</td><td>366</td></tr>
+                    <tr><td>Class I</td><td>189</td></tr>
+                    <tr><td>Class II</td><td>162</td></tr>
+                    <tr><td>Class III</td><td>171</td></tr>
+                    <tr><td>Class IV</td><td>157</td></tr>
+                    <tr><td>Class V</td><td>150</td></tr>
+                    <tr><td>Class VI</td><td>129</td></tr>
+                    <tr><td>Class VII</td><td>128</td></tr>
+                    <tr><td>Class VIII</td><td>95</td></tr>
+                    <tr><td>Class IX</td><td>91</td></tr>
+                    <tr><td>Class X</td><td>79</td></tr>
+                    <tr><td>Class XI</td><td>73</td></tr>
+                    <tr><td>Class XII</td><td>86</td></tr>
+                    <tr className="fw-bold"><td>Total</td><td>1876</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* Profile & Facilities */}
+            <div className="about-details-card">
+              <h3 className="details-title">School Profile</h3>
+              <ul className="details-list">
+                <li><strong>Category:</strong> Primary to Hr. Sec.</li>
+                <li><strong>Type:</strong> Co-educational</li>
+                <li><strong>Classes:</strong> Pre-Primary to XII</li>
+                <li><strong>Management:</strong> Private Unaided (Recognized)</li>
+                <li><strong>Location:</strong> Rural</li>
+                <li><strong>Status:</strong> Operational</li>
+              </ul>
+
+              <h3 className="details-title mt-4">Facilities</h3>
+              <ul className="details-list two-cols">
+                <li><strong>Building:</strong> Pucca, Rented</li>
+                <li><strong>Boys Toilets:</strong> 16</li>
+                <li><strong>Girls Toilets:</strong> 16</li>
+                <li><strong>Drinking Water:</strong> Available</li>
+                <li><strong>Hand Wash:</strong> Available</li>
+                <li><strong>Library:</strong> Available (with Book Bank)</li>
+                <li><strong>Reading Corner:</strong> Available</li>
+                <li><strong>Computers:</strong> 20 Desktops, 1 Laptop</li>
+                <li><strong>Digiboard:</strong> Available</li>
+                <li><strong>Generator:</strong> 2 Functional</li>
+                <li><strong>Other Rooms:</strong> 7</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Principal's Message */}
       <section className="section about-principal-section" id="principal-message">
         <div className="container">

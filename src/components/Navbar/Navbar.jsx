@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
+import logo from '../../assets/logo.png';
 
 function NewNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +54,7 @@ function NewNavbar() {
         <div className="container navbar-inner">
           <Link to="/" className="navbar-brand" aria-label="SVM School Home">
             <div className="navbar-logo-icon">
-              {<img src="src/assets/logo.png" alt="SVM School Logo" />}
+              <img src={logo} alt="SVM School Logo" />
             </div>
             <div className="navbar-brand-text">
               <span className="navbar-school-name">Sri Vivekananda</span>
