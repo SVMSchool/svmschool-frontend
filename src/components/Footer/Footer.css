@@ -1,0 +1,205 @@
+/* ===================================================================
+   Footer — Vivekananda Quote + Multi-Column Layout
+   =================================================================== */
+
+/* --- Quote Strip --- */
+.footer-quote {
+  background: linear-gradient(135deg, var(--clr-gold) 0%, var(--clr-saffron) 100%);
+  padding: var(--space-xl) 0;
+  text-align: center;
+}
+
+.footer-quote blockquote {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-style: italic;
+  color: var(--clr-white);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.footer-quote cite {
+  display: block;
+  margin-top: var(--space-sm);
+  font-size: 0.85rem;
+  font-style: normal;
+  font-family: var(--font-body);
+  opacity: 0.9;
+}
+
+/* --- Main Footer --- */
+.footer-main {
+  background-color: var(--clr-primary-dark);
+  color: rgba(255, 255, 255, 0.8);
+  padding: var(--space-2xl) 0 var(--space-xl);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: var(--space-xl);
+}
+
+/* --- Brand --- */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.footer-logo-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--clr-gold), var(--clr-saffron));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.footer-logo-icon span {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--clr-primary-dark);
+}
+
+.footer-school-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--clr-white);
+  margin-bottom: 2px;
+}
+
+.footer-school-type {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin: 0 !important;
+}
+
+.footer-about-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  opacity: 0.8;
+}
+
+/* --- Headings --- */
+.footer-heading {
+  color: var(--clr-white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-lg);
+  position: relative;
+  padding-bottom: var(--space-sm);
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--clr-gold);
+  border-radius: var(--radius-pill);
+}
+
+/* --- Links --- */
+.footer-links li {
+  margin-bottom: var(--space-sm);
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.88rem;
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--clr-gold-light);
+  padding-left: 6px;
+}
+
+/* --- Contact --- */
+.footer-contact {
+  font-style: normal;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  font-size: 0.88rem;
+}
+
+.footer-contact-item svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  opacity: 0.7;
+}
+
+/* --- Bottom Bar --- */
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: var(--space-md) 0;
+  text-align: center;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom-motto {
+  font-style: italic;
+  color: var(--clr-gold-light);
+  opacity: 0.6;
+}
+
+/* --- Responsive --- */
+@media (max-width: 960px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl) var(--space-lg);
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--space-xl);
+  }
+
+  .footer-brand {
+    justify-content: center;
+  }
+
+  .footer-heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-about-text {
+    margin: 0 auto;
+  }
+
+  .footer-contact-item {
+    justify-content: center;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+}

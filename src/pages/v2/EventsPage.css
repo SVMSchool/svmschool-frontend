@@ -1,0 +1,109 @@
+/* ===================================================================
+   EventsPage Styles
+   =================================================================== */
+
+/* --- Timeline --- */
+.events-timeline {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 40px;
+}
+
+.events-timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--clr-gold), var(--clr-border));
+}
+
+.events-timeline-item {
+  position: relative;
+  margin-bottom: var(--space-lg);
+}
+
+.events-timeline-marker {
+  position: absolute;
+  left: -33px;
+  top: 24px;
+}
+
+.events-timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--clr-gold);
+  border: 3px solid var(--clr-cream);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--clr-gold);
+}
+
+.events-timeline-content {
+  padding: var(--space-lg);
+}
+
+.events-date {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--clr-gold);
+}
+
+.events-title {
+  color: var(--clr-primary);
+  margin: var(--space-xs) 0 var(--space-sm);
+}
+
+.events-desc {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  line-height: 1.65;
+}
+
+/* --- Achievements --- */
+.events-achievements-section {
+  background: var(--clr-cream);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.achievement-card {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.achievement-year {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--clr-primary-light);
+  background: rgba(45, 107, 77, 0.08);
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-md);
+}
+
+.achievement-title {
+  color: var(--clr-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.achievement-desc {
+  font-size: 0.88rem;
+  color: var(--clr-text-muted);
+  line-height: 1.65;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}

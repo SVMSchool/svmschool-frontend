@@ -1,0 +1,263 @@
+/* ===================================================================
+   Top Info Bar
+   =================================================================== */
+.top-bar {
+  background-color: var(--clr-primary-dark);
+  color: var(--clr-text-inverse);
+  font-size: 0.8rem;
+  padding: 6px 0;
+}
+
+.top-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.top-bar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.85;
+}
+
+.top-bar-motto {
+  margin-left: auto;
+  font-style: italic;
+  color: var(--clr-gold-light);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .top-bar-inner {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+  .top-bar-item:last-of-type {
+    display: none;
+  }
+  .top-bar-motto {
+    margin-left: 0;
+    font-size: 0.75rem;
+  }
+}
+
+/* ===================================================================
+   Main Navbar
+   =================================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--clr-primary);
+  transition: box-shadow var(--transition-base), background-color var(--transition-base);
+}
+
+.navbar--scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--navbar-height);
+}
+
+/* --- Brand / Logo --- */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  text-decoration: none;
+  color: var(--clr-text-inverse);
+  flex-shrink: 0;
+}
+
+.navbar-brand:hover {
+  color: var(--clr-text-inverse);
+}
+
+.navbar-logo-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--clr-gold), var(--clr-saffron));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.navbar-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-text-fallback {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--clr-primary-dark);
+}
+
+.navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.navbar-school-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar-school-sub {
+  font-size: 0.72rem;
+  font-weight: 400;
+  opacity: 0.8;
+  letter-spacing: 0.3px;
+}
+
+/* --- Nav Links --- */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar-link {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.navbar-link:hover {
+  color: var(--clr-text-inverse);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-link--active {
+  color: var(--clr-gold-light) !important;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.navbar-link--active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: var(--clr-gold);
+  border-radius: var(--radius-pill);
+}
+
+/* --- Mobile Toggle --- */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.navbar-toggle-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--clr-text-inverse);
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-base);
+}
+
+.navbar-toggle--open .navbar-toggle-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggle--open .navbar-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle--open .navbar-toggle-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --- Mobile Overlay --- */
+.navbar-overlay {
+  display: none;
+}
+
+/* --- Responsive --- */
+@media (max-width: 960px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--clr-primary);
+    flex-direction: column;
+    align-items: stretch;
+    padding: calc(var(--navbar-height) + var(--space-lg)) var(--space-lg) var(--space-lg);
+    transform: translateX(100%);
+    transition: transform var(--transition-base);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    gap: 2px;
+  }
+
+  .navbar-links--open {
+    transform: translateX(0);
+  }
+
+  .navbar-link {
+    padding: 14px 16px;
+    font-size: 1rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .navbar-link--active::after {
+    left: 16px;
+    transform: none;
+    bottom: 8px;
+    width: 3px;
+    height: 20px;
+  }
+
+  .navbar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    animation: fadeIn 0.2s ease;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand-text {
+    display: none;
+  }
+  .navbar-inner {
+    height: 64px;
+  }
+}

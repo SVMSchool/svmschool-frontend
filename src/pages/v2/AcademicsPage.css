@@ -1,0 +1,148 @@
+/* ===================================================================
+   AcademicsPage Styles
+   =================================================================== */
+
+/* --- Grade Cards --- */
+.academics-grades {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.academics-grade-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+}
+
+.academics-grade-number {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--clr-gold);
+  opacity: 0.4;
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 48px;
+}
+
+.academics-grade-level {
+  color: var(--clr-primary);
+  margin-bottom: 4px;
+}
+
+.academics-grade-range {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--clr-gold);
+  background: var(--clr-gold-muted);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-sm);
+}
+
+.academics-grade-desc {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  line-height: 1.65;
+}
+
+/* --- Methodology --- */
+.academics-methodology-section {
+  background: var(--clr-cream);
+}
+
+.academics-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.academics-method-card {
+  padding: var(--space-lg);
+  background: var(--clr-white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--clr-border);
+  transition: all var(--transition-base);
+}
+
+.academics-method-card:hover {
+  border-color: var(--clr-gold);
+  box-shadow: var(--shadow-sm);
+}
+
+.academics-method-card h4 {
+  color: var(--clr-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.academics-method-card p {
+  font-size: 0.88rem;
+  color: var(--clr-text-muted);
+  line-height: 1.65;
+}
+
+/* --- Co-curricular --- */
+.academics-cocurricular-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.academics-activity-card {
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--clr-white);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.academics-activity-card:hover {
+  background: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
+
+.academics-activity-card:hover .academics-activity-name {
+  color: var(--clr-gold-light);
+}
+
+.academics-activity-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--clr-primary);
+  transition: color var(--transition-fast);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .academics-methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .academics-cocurricular-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .academics-grade-card {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .academics-cocurricular-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,88 @@
+import './WhyChooseUs.css';
+
+const features = [
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+      </svg>
+    ),
+    title: 'Academic Excellence',
+    description: 'Tamil Nadu State Board curriculum with a focus on conceptual learning and consistent top results.',
+  },
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+    ),
+    title: 'Experienced Faculty',
+    description: '150+ dedicated teaching and non-teaching staff committed to nurturing each student\'s potential.',
+  },
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+      </svg>
+    ),
+    title: 'Sports & Fitness',
+    description: 'Comprehensive sports programs, Yoga training, and Karate coaching for physical well-being.',
+  },
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+    ),
+    title: 'Cultural Arts',
+    description: 'Bharathanatyam, music, and fine arts programs that celebrate our rich Tamil cultural heritage.',
+  },
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+    ),
+    title: 'Safe Campus',
+    description: 'Secure and nurturing environment where students feel safe, valued, and inspired to learn.',
+  },
+  {
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+      </svg>
+    ),
+    title: 'Transport Facility',
+    description: 'Safe and reliable school bus service covering Anaicut and surrounding areas in Vellore district.',
+  },
+];
+
+function WhyChooseUs() {
+  return (
+    <section className="why-section section" id="why-choose-us" aria-label="Why choose our school">
+      <div className="container">
+        <div className="section-header">
+          <span className="section-label">Why Choose Us</span>
+          <h2 className="section-title">Building Tomorrow's Leaders Today</h2>
+          <hr className="divider divider-center" />
+          <p className="section-subtitle">
+            Inspired by Swami Vivekananda's vision of complete education, we develop the mind,
+            body, and character of every student.
+          </p>
+        </div>
+
+        <div className="why-grid">
+          {features.map((feature, index) => (
+            <div className="why-card card" key={index}>
+              <div className="why-card-icon">{feature.icon}</div>
+              <h3 className="why-card-title">{feature.title}</h3>
+              <p className="why-card-desc">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default WhyChooseUs;

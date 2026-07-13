@@ -1,0 +1,107 @@
+/* ===================================================================
+   GalleryPage Styles
+   =================================================================== */
+
+/* --- Filter Tabs --- */
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-xl);
+}
+
+.gallery-filter-btn {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  border: 1px solid var(--clr-border);
+  background: var(--clr-white);
+  color: var(--clr-text-body);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.gallery-filter-btn:hover {
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+}
+
+.gallery-filter-btn--active {
+  background: var(--clr-primary);
+  border-color: var(--clr-primary);
+  color: var(--clr-white);
+}
+
+/* --- Photo Grid --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.gallery-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  background: var(--clr-white);
+  border: 1px solid var(--clr-border);
+  transition: all var(--transition-base);
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-placeholder {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, var(--clr-cream) 0%, var(--clr-cream-dark) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  color: var(--clr-text-light);
+  font-size: 0.82rem;
+}
+
+.gallery-caption {
+  padding: var(--space-md);
+}
+
+.gallery-caption-category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--clr-gold);
+}
+
+.gallery-caption-text {
+  font-size: 0.9rem;
+  color: var(--clr-text-dark);
+  font-weight: 500;
+  margin: 4px 0 0;
+}
+
+.gallery-empty {
+  text-align: center;
+  color: var(--clr-text-muted);
+  padding: var(--space-2xl);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
